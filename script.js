@@ -194,7 +194,8 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     //encodeURIComponent(mesajeWhatsApp);
 
     //FUNCION ABRRIR WHATSAPP
-      window.open(urlWhatsApp, "_blank"); // Abre en una nueva pestaña
+    window.location.href = urlWhatsApp;
+      //window.open(urlWhatsApp, "_blank"); // Abre en una nueva pestaña
 
 
     //FIN NUEVOOOOOOOOOOOOOO
@@ -231,4 +232,5 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     submitBtn.disabled = false;
     submitBtn.textContent = "Finalizar Compra";
   }
+
 });
