@@ -155,7 +155,8 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     product: product,
     payment: checkoutForm.payment.value, //tipo de pago
     amount: extractAmount(), //bs
-    voucher: voucherBase64 //comprobante
+    voucher: voucherBase64, //comprobante
+    customerPhone: checkoutForm.customerPhone.value //numero de telefono nuevo
   };
   //eliminamos el envio pro todo los juegos fin
 
@@ -234,3 +235,4 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
   }
 
 });
+
