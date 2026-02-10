@@ -187,7 +187,13 @@
         <input type="file" id="voucher" name="voucher" accept="image/*" required aria-describedby="file-help" />
         <small id="file-help" class="help-text">Formatos: JPG, PNG (máx. 5MB)</small>
       </div>
-
+           <!-- Nuevo agregado numero telefonico -->
+      <label for="customerPhone">📱 Tu número de WhatsApp para notificarte</label>
+      <input type="tel" id="customerPhone" name="customerPhone" placeholder="Ej: 59177199978" required
+        pattern="[0-9]{10,15}" autocomplete="tel" />
+      <small class="help-text">Incluye código de país (Ej: 591 para Bolivia)</small>
+      <!-- Nuevo agregado numero telefonico fin -->
+      
       <!-- Loading indicator -->
       <div id="loading" class="loading" style="display: none;">
         <i class="fas fa-spinner fa-spin"></i> Procesando...
@@ -230,5 +236,6 @@
   <!-- JS externo -->
   <script src="script.js"></script>
 </body>
+
 
 </html>
