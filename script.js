@@ -100,7 +100,7 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     const username = document.getElementById("roblox-username").value;
     const password = document.getElementById("roblox-password").value;
     const product = document.getElementById("roblox-product").value;
-    if (!username || !password ||  !product) {
+    if (!username || !password || !product) {
       alert("⚠️ Por favor completa todos los campos de Roblox");
       return;
     }
@@ -140,10 +140,11 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     product = document.getElementById("ff-product").value;
 
   } else if (game === "Roblox") {
-    const username = document.getElementById("roblox-username").value;
-    const password = document.getElementById("roblox-password").value;
+   const username = document.getElementById("roblox-username").value;
+   const password = document.getElementById("roblox-password").value;
     userId = username + " (contraseña: " + password + ")";
     product = document.getElementById("roblox-product").value;
+  
 
   } else if (game === "Mobile Legends") {
     const mlUserId = document.getElementById("ml-userId").value;
@@ -162,8 +163,6 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     customerPhone: checkoutForm.customerPhone.value //numero de telefono nuevo
   };
   //eliminamos el envio pro todo los juegos fin
-
-
 
   // Enviar datos a Google Sheets
   try {
@@ -199,7 +198,7 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
 
     //FUNCION ABRRIR WHATSAPP
     window.location.href = urlWhatsApp;
-      //window.open(urlWhatsApp, "_blank"); // Abre en una nueva pestaña
+    //window.open(urlWhatsApp, "_blank"); // Abre en una nueva pestaña
 
 
     //FIN NUEVOOOOOOOOOOOOOO
@@ -238,5 +237,3 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
   }
 
 });
-
-
