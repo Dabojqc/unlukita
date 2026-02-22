@@ -50,7 +50,8 @@
       <div class="card-content">
         <h3>💎 Diamantes</h3>
         <p>Recarga directa vía ID rápido y seguro.</p>
-        <button class="btn-recarga" data-game="Free Fire" aria-label="Comprar diamantes de Free Fire"><!-- datagame es con lo que vinculara el formulaio pasando a js-->
+        <button class="btn-recarga" data-game="Free Fire"
+          aria-label="Comprar diamantes de Free Fire"><!-- datagame es con lo que vinculara el formulaio pasando a js-->
           COMPRAR
         </button>
       </div>
@@ -63,7 +64,8 @@
       <div class="card-content">
         <h3>⏣ Robux</h3>
         <p>Carga tus Robux al mejor precio del mercado.</p>
-        <button class="btn-recarga" data-game="Roblox" aria-label="Comprar Robux de Roblox"><!-- datagame es con lo que vinculara el formulaio pasando a js-->
+        <button class="btn-recarga" data-game="Roblox"
+          aria-label="Comprar Robux de Roblox"><!-- datagame es con lo que vinculara el formulaio pasando a js-->
           COMPRAR
         </button>
       </div>
@@ -76,7 +78,8 @@
       <div class="card-content">
         <h3>💎 Diamantes</h3>
         <p>Consigue tus skins y pases de batalla.</p>
-        <button class="btn-recarga" data-game="Mobile Legends" aria-label="Comprar diamantes de Mobile Legends"><!-- datagame es con lo que vinculara el formulaio pasando a js-->
+        <button class="btn-recarga" data-game="Mobile Legends"
+          aria-label="Comprar diamantes de Mobile Legends"><!-- datagame es con lo que vinculara el formulaio pasando a js-->
           COMPRAR
         </button>
       </div>
@@ -95,76 +98,78 @@
       <!-- ========== BLOQUE FREE FIRE ========== -->
       <div id="form-freefire" style="display:none;">
 
-      <label for="ff-userId">ID de Free Fire</label>
-      <input type="text" id="ff-userId" name="ff-userId" placeholder="Ej: 123456789" autocomplete="off" />
-  
-      <label for="ff-product">Selecciona tu paquete</label>
-      <select id="ff-product" name="ff-product">
-      <option value="" disabled selected>-- Selecciona un producto --</option>
-      <option value="100+10 diamantes">💎 110 diamantes - Bs 9.99</option>  
-      <option value="310+31 diamantes">💎 341 diamantes - Bs 33.29</option>
-      <option value="520+52 diamantes">💎 572 diamantes - Bs 46.71</option>
-      <option value="1060+106 diamantes">💎 1166 diamantes - Bs 86.77</option>
-      <option value="2180+218 diamantes">💎 2398 diamantes - Bs 172.20</option>
-      <option value="5600+560 diamantes">💎 6160 diamantes - Bs 438.28</option>
-      <option value="⏰ PASE SEMANAL">⏰ PASE SEMANAL - Bs 17.36</option>
-      <option value="📅 PASE MENSUAL">📅 PASE MENSUAL - Bs 92.20</option>
-      </select>
+        <label for="ff-userId">ID de Free Fire</label>
+        <input type="text" id="ff-userId" name="ff-userId" placeholder="Ej: 123456789" autocomplete="off" />
+
+        <label for="ff-product">Selecciona tu paquete</label>
+        <select id="ff-product" name="ff-product">
+          <option value="" disabled selected>-- Selecciona un producto --</option>
+          <option value="100+10 diamantes">💎 110 diamantes - Bs 9.99</option>
+          <option value="310+31 diamantes">💎 341 diamantes - Bs 33.29</option>
+          <option value="520+52 diamantes">💎 572 diamantes - Bs 46.71</option>
+          <option value="1060+106 diamantes">💎 1166 diamantes - Bs 86.77</option>
+          <option value="2180+218 diamantes">💎 2398 diamantes - Bs 172.20</option>
+          <option value="5600+560 diamantes">💎 6160 diamantes - Bs 438.28</option>
+          <option value="⏰ PASE SEMANAL">⏰ PASE SEMANAL - Bs 17.36</option>
+          <option value="📅 PASE MENSUAL">📅 PASE MENSUAL - Bs 92.20</option>
+        </select>
       </div>
 
       <!-- ========== BLOQUE ROBLOX ========== -->
       <div id="form-roblox" style="display:none;">
-     <label>Usuario / Contraseña</label>
-     <div class="campo-doble">
-    <input type="text" id="roblox-username" name="roblox-username" placeholder="Usuario" autocomplete="off" />
-    <input type="password" id="roblox-password" name="roblox-password" placeholder="Contraseña" autocomplete="off" />
-    </div>
-  
-      <label for="roblox-product">Selecciona tu paquete</label>
-      <select id="roblox-product" name="roblox-product">
-      <option value="" disabled selected>-- Selecciona un producto --</option>
-      <option value="40 Robux">⏣ 40 Robux - Bs 7</option>
-      <option value="80 Robux">⏣ 80 Robux - Bs 12.5</option>
-      <option value="400 Robux">⏣ 400 Robux - Bs 60</option>
-      <option value="800 Robux">⏣ 800 Robux - Bs 113</option>
-      <option value="1700 Robux">⏣ 1700 Robux - Bs 222</option>
-      <option value="4500 Robux">⏣ 4500 Robux - Bs 506</option>
-      <option value="10000 Robux">⏣ 10000 Robux - Bs 1002</option>
-      <option value="22500 Robux">⏣ 22500 Robux - Bs 2000</option>
-      </select>
+
+        <label>Nombre de usuario/Contraseña</label>
+          <div class="campo-doble">
+         <input type="text" id="roblox-username" name="roblox-username" placeholder="Usuario" autocomplete="off" />
+         <input type="password" id="roblox-password" name="roblox-password" placeholder="Contraseña" autocomplete="off" />
+         </div>
+
+        <label for="roblox-product">Selecciona tu paquete</label>
+        <select id="roblox-product" name="roblox-product">
+          <option value="" disabled selected>-- Selecciona un producto --</option>
+          <option value="40 Robux">⏣ 40 Robux - Bs 7</option>
+          <option value="80 Robux">⏣ 80 Robux - Bs 12.5</option>
+          <option value="400 Robux">⏣ 400 Robux - Bs 60</option>
+          <option value="800 Robux">⏣ 800 Robux - Bs 113</option>
+          <option value="1700 Robux">⏣ 1700 Robux - Bs 222</option>
+          <option value="4500 Robux">⏣ 4500 Robux - Bs 506</option>
+          <option value="10000 Robux">⏣ 10000 Robux - Bs 1002</option>
+          <option value="22500 Robux">⏣ 22500 Robux - Bs 2000</option>
+        </select>
       </div>
 
       <!-- ========== BLOQUE MOBILE LEGENDS ========== -->
       <div id="form-ml" style="display:none;">
 
-      <label for="ml-userId">ID de jugador</label>                                                 <!-- esto lo que hace agrega casilla+titulo -->
-      <input type="text" id="ml-userId" name="ml-userId" placeholder="Ej: 12345678" autocomplete="off" />
-  
-      <label for="ml-zone">Zona/Server</label>                                                     <!-- esto lo que hace agrega casilla+titulo -->
-      <input type="text" id="ml-zone" name="ml-zone" placeholder="Ej: 9054" autocomplete="off" />  <!-- esto lo que hace agrega casilla+titulo -->
-  
-      <label for="ml-product">Selecciona tu paquete</label>
-      <select id="ml-product" name="ml-product">
-      <option value="" disabled selected>-- Selecciona un producto --</option>
-      <option value="55+5 diamantes">💎 60 diamantes - Bs 8.1</option>
-      <option value="78+8 diamantes">💎 86 diamantes - Bs 12.7</option>
-      <option value="150+15 diamantes">💎 165 diamantes - Bs 24.1</option>
-      <option value="156+16 diamantes">💎 172 diamantes - Bs 25.2</option>
-      <option value="234+23 diamantes">💎 257 diamantes - Bs 36.5</option>
-      <option value="250+25 diamantes">💎 275 diamantes - Bs 38.7</option>
-      <option value="500+65 diamantes">💎 565 diamantes - Bs 79.5</option>
-      <option value="625+81 diamantes">💎 706 diamantes - Bs 99.1</option>
-      <option value="1860+335 diamantes">💎 2195 diamantes - Bs 300.0</option>
-      <option value="3099+589 diamantes">💎 3688 diamantes - Bs 500.4</option>
-      <option value="4649+883 diamantes">💎 5532 diamantes - Bs 755.6</option>
-      <option value="7740+1548 diamantes">💎 9288 diamantes - Bs 1254.9</option>
-      <option value="⭐ Pase Crepusculo">⭐ Pase Crepusculo - Bs 83.1</option>
-      <option value="⭐ 📅 Pase Semanal">📅 Pase Semanal - Bs 15.7</option>
+        <label for="ml-userId">ID de jugador</label> <!-- esto lo que hace agrega casilla+titulo -->
+        <input type="text" id="ml-userId" name="ml-userId" placeholder="Ej: 12345678" autocomplete="off" />
 
-      </select>
+        <label for="ml-zone">Zona/Server</label> <!-- esto lo que hace agrega casilla+titulo -->
+        <input type="text" id="ml-zone" name="ml-zone" placeholder="Ej: 9054" autocomplete="off" />
+        <!-- esto lo que hace agrega casilla+titulo -->
+
+        <label for="ml-product">Selecciona tu paquete</label>
+        <select id="ml-product" name="ml-product">
+          <option value="" disabled selected>-- Selecciona un producto --</option>
+          <option value="55+5 diamantes">💎 60 diamantes - Bs 8.1</option>
+          <option value="78+8 diamantes">💎 86 diamantes - Bs 12.7</option>
+          <option value="150+15 diamantes">💎 165 diamantes - Bs 24.1</option>
+          <option value="156+16 diamantes">💎 172 diamantes - Bs 25.2</option>
+          <option value="234+23 diamantes">💎 257 diamantes - Bs 36.5</option>
+          <option value="250+25 diamantes">💎 275 diamantes - Bs 38.7</option>
+          <option value="500+65 diamantes">💎 565 diamantes - Bs 79.5</option>
+          <option value="625+81 diamantes">💎 706 diamantes - Bs 99.1</option>
+          <option value="1860+335 diamantes">💎 2195 diamantes - Bs 300.0</option>
+          <option value="3099+589 diamantes">💎 3688 diamantes - Bs 500.4</option>
+          <option value="4649+883 diamantes">💎 5532 diamantes - Bs 755.6</option>
+          <option value="7740+1548 diamantes">💎 9288 diamantes - Bs 1254.9</option>
+          <option value="⭐ Pase Crepusculo">⭐ Pase Crepusculo - Bs 83.1</option>
+          <option value="⭐ 📅 Pase Semanal">📅 Pase Semanal - Bs 15.7</option>
+
+        </select>
       </div>
-       <!-- parte eliminado fin de code -->
-      
+      <!-- parte eliminado fin de code -->
+
 
       <label for="payment">Forma de pago</label>
       <select id="payment" name="payment" required>
@@ -172,7 +177,8 @@
         <option value="" disabled selected>-- Selecciona forma de pago --</option>
         <option value="TigoMoney">TigoMoney</option>
         <option value="QR, Bancos, Yape">QR, Bancos, Yape</option>
-        <option value="OTRO">OTRO</option>  <!-- EL BLANCO ES LO QUE SE MUESTRA AL USUARIO Y EL NARANJA EL DATO QUE ENVIA-->
+        <option value="OTRO">OTRO</option>
+        <!-- EL BLANCO ES LO QUE SE MUESTRA AL USUARIO Y EL NARANJA EL DATO QUE ENVIA-->
       </select>
 
       <!-- QR Code Section -->
@@ -189,13 +195,13 @@
         <input type="file" id="voucher" name="voucher" accept="image/*" required aria-describedby="file-help" />
         <small id="file-help" class="help-text">Formatos: JPG, PNG (máx. 5MB)</small>
       </div>
-           <!-- Nuevo agregado numero telefonico -->
+      <!-- Nuevo agregado numero telefonico -->
       <label for="customerPhone">📱 Tu número de WhatsApp para notificarte</label>
       <input type="tel" id="customerPhone" name="customerPhone" placeholder="Ej: 59177199978" required
         pattern="[0-9]{10,15}" autocomplete="tel" />
       <small class="help-text">Incluye código de país (Ej: 591 para Bolivia)</small>
       <!-- Nuevo agregado numero telefonico fin -->
-      
+
       <!-- Loading indicator -->
       <div id="loading" class="loading" style="display: none;">
         <i class="fas fa-spinner fa-spin"></i> Procesando...
@@ -216,25 +222,21 @@
       © 2026
       <strong class="brand-name">UnLukita</strong> - Potenciando tu juego
     </p>
-     <!-- agregando el code -->
+    <!-- agregando el code -->
     <div class="social-links">
-      <a href="https://www.facebook.com/profile.php?id=61586004871497" 
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      
-      <a href="https://www.tiktok.com/@unlukita8"
-      target="_blank"
-      rel="noopener noreferrer"
-       aria-label="Instagram"><i class="fab fa-tiktok"></i></a>
-       
-      <a href="https://wa.me/59177199978?text=Hola,%20quiero%20información%20sobre%20recargas"
-      target="_blank"
-      rel="noopener noreferrer"
-       aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61586004871497" target="_blank" rel="noopener noreferrer"
+        aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+
+      <a href="https://www.tiktok.com/@unlukita8" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+          class="fab fa-tiktok"></i></a>
+
+      <a href="https://wa.me/59177199978?text=Hola,%20quiero%20información%20sobre%20recargas" target="_blank"
+        rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
-  <!-- Botón Flotante de Soporte WhatsApp -->
+
+  
+    <!-- Botón Flotante de Soporte WhatsApp -->
   <a href="https://wa.me/59177199978?text=Hola%2C%20necesito%20soporte%20con%20mi%20recarga%20🎮" 
      target="_blank" 
      rel="noopener noreferrer" 
@@ -249,7 +251,5 @@
   <script src="script.js"></script>
 </body>
 
-
 </html>
-
 
