@@ -89,6 +89,10 @@
   <!-- Checkout -->
   <aside id="checkout" aria-live="polite">
     <h2>Checkout</h2>
+    <!-- Bandera Bolivia -->
+     <div class="flag-bolivia" aria-label="Bolivia"></div>
+     <div class="flag-bolivia"><span></span></div>
+    <!-- Bandera Bolivia fin-->
 
     <form id="checkout-form">
       <label for="game">Juego</label>
@@ -100,11 +104,14 @@
 
         <label for="ff-userId">ID de Free Fire</label>
         <input type="text" id="ff-userId" name="ff-userId" placeholder="Ej: 123456789" autocomplete="off" />
+        <!-- NUEVO: Nombre de jugador Free Fire -->
+        <label for="ff-username">Nombre de jugador (Nick)</label>
+        <input type="text" id="ff-username" name="ff-username" placeholder="Ej: ProPlayer123" autocomplete="off" />
 
         <label for="ff-product">Selecciona tu paquete</label>
         <select id="ff-product" name="ff-product">
           <option value="" disabled selected>-- Selecciona un producto --</option>
-          <option value="100+10 diamantes">💎 110 diamantes - Bs 9.99</option>
+          <option value="100+10 diamantes" data-img="img/Free/FF_110.webp">💎 110 diamantes - Bs 9.99</option>
           <option value="310+31 diamantes">💎 341 diamantes - Bs 33.29</option>
           <option value="520+52 diamantes">💎 572 diamantes - Bs 46.71</option>
           <option value="1060+106 diamantes">💎 1166 diamantes - Bs 86.77</option>
@@ -123,6 +130,9 @@
          <input type="text" id="roblox-username" name="roblox-username" placeholder="Usuario" autocomplete="off" />
          <input type="password" id="roblox-password" name="roblox-password" placeholder="Contraseña" autocomplete="off" />
          </div>
+         <!-- NUEVO: Nombre de jugador Roblox -->
+         <label for="roblox-nick">Nombre de jugador (Nick)</label>
+         <input type="text" id="roblox-nick" name="roblox-nick" placeholder="Ej: ProPlayer123" autocomplete="off" />
 
         <label for="roblox-product">Selecciona tu paquete</label>
         <select id="roblox-product" name="roblox-product">
@@ -147,6 +157,10 @@
         <label for="ml-zone">Zona/Server</label> <!-- esto lo que hace agrega casilla+titulo -->
         <input type="text" id="ml-zone" name="ml-zone" placeholder="Ej: 9054" autocomplete="off" />
         <!-- esto lo que hace agrega casilla+titulo -->
+
+        <!-- NUEVO: Nombre de jugador Mobile Legends -->
+        <label for="ml-username">Nombre de jugador (Nick)</label>
+        <input type="text" id="ml-username" name="ml-username" placeholder="Ej: ProPlayer123" autocomplete="off" />
 
         <label for="ml-product">Selecciona tu paquete</label>
         <select id="ml-product" name="ml-product">
@@ -183,7 +197,8 @@
 
       <!-- QR Code Section -->
       <div class="qr-section">
-        <img src="img/qr-banco-economico.png" alt="QR Banco Económico para realizar el pago" class="qr-image" />
+        <img id="qr-image" src="img/qr-banco-economico.png" 
+        alt="QR Banco Económico para realizar el pago" class="qr-image" />
         <p class="qr-description">
           Escanea el QR para realizar el pago
         </p>
@@ -195,12 +210,17 @@
         <input type="file" id="voucher" name="voucher" accept="image/*" required aria-describedby="file-help" />
         <small id="file-help" class="help-text">Formatos: JPG, PNG (máx. 5MB)</small>
       </div>
-      <!-- Nuevo agregado numero telefonico -->
+<!-- Nuevo agregado numero telefonico -->
       <label for="customerPhone">📱 Tu número de WhatsApp para notificarte</label>
-      <input type="tel" id="customerPhone" name="customerPhone" placeholder="Ej: 59177199978" required
-        pattern="[0-9]{10,15}" autocomplete="tel" />
+<div class="phone-input-wrapper">
+  <span class="phone-prefix">🇧🇴 +591</span>
+  <input type="tel" id="customerPhone" name="customerPhone"
+    placeholder="77199978" required
+    pattern="[0-9]{8}" autocomplete="tel" />
+</div>
       <small class="help-text">Incluye código de país (Ej: 591 para Bolivia)</small>
-      <!-- Nuevo agregado numero telefonico fin -->
+ 
+    <!-- Nuevo agregado numero telefonico fin -->
 
       <!-- Loading indicator -->
       <div id="loading" class="loading" style="display: none;">
@@ -250,6 +270,8 @@
   <!-- JS externo -->
   <script src="script.js"></script>
 </body>
+
+</html>
 
 </html>
 
