@@ -274,6 +274,7 @@ footer {
 #checkout select,
 #checkout input[type="text"],
 #checkout input[type="number"],
+#checkout input[type="tel"],  
 #checkout input[type="file"] {
   width: 100%;
   padding: 12px;
@@ -316,7 +317,7 @@ footer {
   font-style: italic;
 }
 
-/* QR Section */
+/* QR Section es el tamaño*/
 .qr-section {
   text-align: center;
   margin: 25px 0;
@@ -326,7 +327,7 @@ footer {
 }
 
 .qr-image {
-  max-width: 200px;
+  max-width: 400px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
   display: block;
@@ -506,7 +507,43 @@ footer {
     font-size: 1.8rem;
   }
 }
+/* --- PHONE INPUT --- */
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 5px;
+}
 
+.phone-prefix {
+  padding: 12px;
+  background: #f5f5f5;
+  border-right: 2px solid #ddd;
+  font-size: 1rem;
+  color: var(--petroleo);
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.phone-input-wrapper input[type="tel"] {
+  border: none;
+  padding: 12px;
+  flex: 1;
+  font-size: 1rem;
+  outline: none;
+  background: white;
+  color: var(--petroleo);
+  font-family: inherit;
+  min-width: 0;
+}
+
+.phone-input-wrapper:focus-within {
+  border-color: var(--petroleo);
+}
+
+/* --- ANIMACIONES ADICIONALES --- */
 /* --- ANIMACIONES ADICIONALES --- */
 @keyframes fadeIn {
   from {
@@ -534,4 +571,40 @@ footer {
 
 .card:nth-child(3) {
   animation-delay: 0.3s;
+}
+/* --- BANDERA BOLIVIA CHECKOUT --- */
+#checkout {
+  position: relative; /* importante para anclar la bandera */
+}
+
+.flag-bolivia {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 22px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  border: 1px solid #ccc;
+}
+
+.flag-bolivia::before,
+.flag-bolivia::after,
+.flag-bolivia span {
+  content: "";
+  display: block;
+  height: 33.33%;
+}
+
+.flag-bolivia::before {
+  background: #d52b1e; /* rojo */
+}
+
+.flag-bolivia span {
+  background: #ffd700; /* amarillo */
+}
+
+.flag-bolivia::after {
+  background: #007a33; /* verde */
 }
