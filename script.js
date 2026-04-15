@@ -71,6 +71,7 @@ cancelBtn.addEventListener("click", () => {
   document.getElementById("form-freefire").style.display = "none";
   document.getElementById("form-roblox").style.display = "none";
   document.getElementById("form-ml").style.display = "none";
+  document.getElementById("qr-image").src = "img/qr-banco-economico.png"; // Resetear imagen QR al cancelar
   //🆕NUEVO AGREGADO FIN
 });
 
@@ -91,24 +92,27 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
 
   if (game === "Free Fire") {
     const userId = document.getElementById("ff-userId").value;
+    const username = document.getElementById("ff-username").value;
     const product = document.getElementById("ff-product").value;
-    if (!userId || !product) {
+    if (!userId || !username || !product) {
       alert("⚠️ Por favor completa todos los campos de Free Fire");
       return;
     }
   } else if (game === "Roblox") {
     const username = document.getElementById("roblox-username").value;
     const password = document.getElementById("roblox-password").value;
+    const robloxNick = document.getElementById("roblox-nick").value;
     const product = document.getElementById("roblox-product").value;
-    if (!username || !password || !product) {
+    if (!username || !password || !robloxNick || !product) {
       alert("⚠️ Por favor completa todos los campos de Roblox");
       return;
     }
   } else if (game === "Mobile Legends") {
     const userId = document.getElementById("ml-userId").value;
     const zone = document.getElementById("ml-zone").value;
+    const mlUsername = document.getElementById("ml-username").value;
     const product = document.getElementById("ml-product").value;
-    if (!userId || !zone || !product) {
+    if (!userId || !zone || !mlUsername || !product) {
       alert("⚠️ Por favor completa todos los campos de Mobile Legends");
       return;
     }
@@ -137,12 +141,14 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
 
   if (game === "Free Fire") {
     userId = document.getElementById("ff-userId").value;
+    playerUsername = document.getElementById("ff-username").value;
     product = document.getElementById("ff-product").value;
 
   } else if (game === "Roblox") {
    const username = document.getElementById("roblox-username").value;
    const password = document.getElementById("roblox-password").value;
     userId = username + " (contraseña: " + password + ")";
+    playerUsername = document.getElementById("roblox-nick").value;
     product = document.getElementById("roblox-product").value;
   
 
@@ -150,17 +156,19 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     const mlUserId = document.getElementById("ml-userId").value;
     const mlZone = document.getElementById("ml-zone").value;
     userId = mlUserId + " (Zona: " + mlZone + ")";
+    playerUsername = document.getElementById("ml-username").value;
     product = document.getElementById("ml-product").value;
   }
 
   const formData = {
     game: game,
     userId: userId,
+    playerUsername: playerUsername,   // ← campo separado para el Nick
     product: product,
     payment: checkoutForm.payment.value, //tipo de pago
     amount: extractAmount(), //bs
     voucher: voucherBase64, //comprobante
-    customerPhone: checkoutForm.customerPhone.value //numero de telefono nuevo
+    customerPhone: "591" + checkoutForm.customerPhone.value //numero de telefono nuevo
   };
   //eliminamos el envio pro todo los juegos fin
 
@@ -181,6 +189,7 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     
     🎮 Juego: ${formData.game}
     🆔 ID Usuario: ${formData.userId}
+    👤 Nick: ${formData.playerUsername || "N/A"}
     📦 Producto: ${formData.product}
     💰 Monto: Bs ${formData.amount}
     💳 Pago: ${formData.payment}
@@ -191,36 +200,7 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     //const urlWhatsApp =
     // ✨ USAR PROTOCOLO whatsapp:// PARA ABRIR LA APP DIRECTAMENTE NUEVOOOOOO
     const urlWhatsApp = `https://wa.me/${numeroAdmin}?text=${encodeURIComponent(mesajeWhatsApp)}`;
-    //"https://wa.me/" +
-    //numeroAdmin +
-    //"?text=" +
-    //encodeURIComponent(mesajeWhatsApp);
-
-    //FUNCION ABRRIR WHATSAPP
     window.location.href = urlWhatsApp;
-    //window.open(urlWhatsApp, "_blank"); // Abre en una nueva pestaña
-
-
-    //FIN NUEVOOOOOOOOOOOOOO
-    //window.open(urlWhatsApp, "_self");//UNO prueba
-
-    //NEW DATO PARA ELABORACION DEL NUEVO CODIGO QUE S PARA WASSAPT AUTOMATICO PRUEBA UNO FIN
-
-
-
-    // Mostrar mensaje de éxito ALTERADO
-    //alert(
-    //"✅ ¡Compra registrada exitosamente!\n\n" +
-    //"Juego: " + formData.game + "\n" +
-    //"ID Usuario: " + formData.userId + "\n" +
-    //"Producto: " + formData.product + "\n" +
-    //"Monto: Bs " + formData.amount + "\n" + //esto agregue para que se vea el monto 
-    //"Pago: " + formData.payment + "\n\n" +
-    //"Te contactaremos pronto para confirmar tu recarga."
-    //);
-    // Mostrar mensaje de éxito ALTERADO
-
-
     //Resetear formulario
     checkout.style.display = "none";
     productsContainer.style.display = "grid";
@@ -236,4 +216,16 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     submitBtn.textContent = "Finalizar Compra";
   }
 
+});
+// Cambiar imagen según producto seleccionado
+const selectsConImagen = ["ff-product", "roblox-product", "ml-product"];
+const qrImage = document.getElementById("qr-image");
+const defaultQR = "img/qr-banco-economico.png";
+
+selectsConImagen.forEach(selectId => {
+  document.getElementById(selectId).addEventListener("change", function () {
+    const selectedOption = this.options[this.selectedIndex];
+    const img = selectedOption.getAttribute("data-img");
+    qrImage.src = img ? img : defaultQR;
+  });
 });
